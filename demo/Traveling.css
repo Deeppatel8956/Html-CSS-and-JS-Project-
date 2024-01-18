@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width:100% ;
+    background: rgba(0, 0, 0, 0.5) url('trveling.jpg');
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navbar{
+    width: 95%;
+    height: auto;
+    margin-left: 30px;
+}
+.logo{
+    color: orangered;
+    font-size: 40px;
+    font-family: cursive;
+    float: left;
+    padding-top: .6%;
+    cursor: pointer;
+}
+.menu{
+    width: 600px;
+    float: left;
+    height: 70px;
+}
+ul{
+    float: left;
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+}
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    font-size: 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    transition: .3s ease;
+}
+ul li a:hover{
+    color: orange;
+
+}
+.search-box{
+    float: right;
+    width: auto;
+    background-color: white;
+    height: 30px;
+    padding: 8px;
+    border-radius: 15px;
+    margin-top: 1%;
+    margin-right: 2%;
+}
+.search-box .search-txt{
+    width: 190px;
+    padding: 0 6px;
+}
+.search-btn{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: black;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: .6px;
+}
+.title{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title h1{
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 85px;
+
+}
+.button{
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn{
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 18px;
+    border: 2px solid white;
+    transition: .3s ease;
+}
+.btn:hover{
+    background-color: white;
+    border: 10px;
+    color: black;
+}
