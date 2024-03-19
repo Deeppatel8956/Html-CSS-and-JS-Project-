@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(41, 42, 40);
+}
+#container{
+    background-color: azure;
+    height: 600px;
+    width: 500px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+#container img{
+    height:  100%;
+    width:  100%;
+    object-fit: cover;
+    object-position: center;
+    /* padding: 10px; */
+}
+#container i{
+    color: rgba(199, 19, 231, 0.899);
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0.8;
+    transition: all ease-in 0.4s;
+}
