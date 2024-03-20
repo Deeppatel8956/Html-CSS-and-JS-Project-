@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(166, 234, 166);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#tpanel{
+    height: 90%;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+}
+#ptop{
+    width: 100%;
+    height: 100px;
+    background-color: green;
+    overflow: hidden;
+    display: flex;
+    /* padding: 10px 20px; */
+    padding: 0 20%;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+.elem{
+    gap: 10px;
+    align-items: center;
+    display: flex;
+    
+}
+.box{
+    background-color: white;
+    padding:10px 19px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    
+}
+#pbtm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    height: calc(100% - 100px);
+    /* background-color: black; */
+    padding: 20px ;
+}
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+}
+.bubble:hover{
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
