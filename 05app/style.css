@@ -1,0 +1,65 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: rgba(12, 171, 244, 0.973);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card{
+    height: 450px;
+    width: 390px;
+    background-color: azure;
+    border-radius: 15px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+
+}
+.stroyes{
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 15px ;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.stroyes::-webkit-scrollbar{
+    display: none;
+}
+.story{
+    border: 3px solid red;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 5px;
+}
+.story img{
+    height: 100%;
+    width: 100%;
+   
+    object-fit: cover;
+    object-position: center;
+    /* object-position: top; */
+}
+
+#full-screen{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
