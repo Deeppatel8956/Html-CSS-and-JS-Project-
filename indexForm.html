@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Sample Form</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Enhanced Sample Form</h1>
+    <form id="sampleForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" >
+            <small class="error-message" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" >
+            <small class="error-message" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="100" >
+            <small class="error-message" id="ageError"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" ></textarea>
+            <small class="error-message" id="messageError"></small>
+        </div>
+
+        <button type="submit">Submit</button>
+        <div id="feedback" class="feedback"></div>
+    </form>
+
+    <script >
+        document.getElementById('sampleForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the default way
+    
+    // Clear previous error messages
+    document.querySelectorAll('.error-message').forEach(function(errorElement) {
+        errorElement.style.display = 'none';
+    });
+
+    // Basic validation
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var age = document.getElementById('age').value;
+    var message = document.getElementById('message').value.trim();
+    var isValid = true;
+
+    if (!name) {
+        document.getElementById('nameError').textContent = 'Name is required';
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (!email) {
+        document.getElementById('emailError').textContent = 'Email is required';
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+        document.getElementById('emailError').textContent = 'Email is invalid';
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (!age) {
+        document.getElementById('ageError').textContent = 'Age is required';
+        document.getElementById('ageError').style.display = 'block';
+        isValid = false;
+    } else if (isNaN(age) || age < 1 || age > 100) {
+        document.getElementById('ageError').textContent = 'Please enter a valid age between 1 and 100';
+        document.getElementById('ageError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (!message) {
+        document.getElementById('messageError').textContent = 'Message is required';
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (!isValid) {
+        return;
+    }
+
+    // If all checks pass, you can send the data to a server or handle it as needed
+    var formData = {
+        name: name,
+        email: email,
+        age: age,
+        message: message
+    };
+
+    console.log('Form Data Submitted:', formData);
+
+    // Display feedback to the user
+    var feedback = document.getElementById('feedback');
+    feedback.textContent = 'Form submitted successfully!';
+    feedback.style.color = 'green';
+
+    // Reset the form
+    document.getElementById('sampleForm').reset();
+});
+
+    </script>
+</body>
+</html>
