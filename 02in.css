@@ -82,3 +82,50 @@ box-shadow: 10px 6px 109px 0px rgba(0,0,0,0.75);
 box-shadow: 10px 6px 109px 0px rgba(0,0,0,0.75);
 
 }
+
+/* apple */
+.apple{
+    background: url('https://pbs.twimg.com/media/GPG12MxW4AAcUdb?format=jpg&name=large')no-repeat ;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+}
+.apple h1{
+    /* font-family: "Josefin Sans", sans-serif; */
+    font-family: "Reddit Mono", monospace;
+}
+
+/* news */
+.news{
+    background-color: black;
+    color: white;
+}
+.btn4 {
+    height: 45px;
+    width: 100px;
+    background-color: white;
+    border: 2px solid white;
+    font-weight: 600;
+    margin-left: -10px;   
+}
+.news input{
+    height: 45px;
+    width: 55%;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.news ::placeholder{
+    color: white;
+}
+.news p{
+    margin: 0;
+}
+
+i{
+    font-size: 30px;
+}
