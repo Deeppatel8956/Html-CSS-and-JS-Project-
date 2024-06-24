@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&display=swap');
+
+
+:root {
+    /* Primary Color */
+    --primary-color: #048E7B;
+  
+    --background-color : #023931 ;
+  
+    /* Background */
+    --white-color: #ffffff; 
+  
+    /* Accent Gray */
+    --heading-text: #000;
+  
+    /* Text and Secondary Elements */
+    --text-color: #333;
+  
+    /* Divider Lines */
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html{
+    font-size: 62.5%;
+  }
+
+  body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  nav{
+    height: 9rem;
+  }
+ 
+  .bg-header{
+    background-color: var(--background-color);
+  }
+  .navbar-brand{
+    font-size: 2.4rem;
+    color: #fff;
+  }
+
+  .nav-link:link, .nav-link:active{
+    font-size: 1.8rem;
+    color: #fff;
+font-weight: 600;
+display: inline-block;
+  }
+
+  .nav-link:hover, .nav-link:active{
+    color: var(--primary-color);
+  }
+
+  .nav-link.cta{
+    background-color: #048E7B;
+    display: inline-block;
+    padding: 0.5rem 2rem  !important;
+    border-radius: 5px; 
+  }
+
+  .nav-link.cta:hover{
+    background-color: #0e2420;
+    color: #fff;
+  }
+
+
+  /* herosection */
+ .hero-section{
+    padding: 9rem 0 !important;
+ } 
+.hero-section h1{
+    font-size: 5rem;
+    letter-spacing: -0.4px;
+    line-height: 1.2;
+}
+
+.hero-section p{
+    font-size: 2rem;
+    letter-spacing: 0.2px;
+    line-height: 1.3;
+}
+
+.btn{
+    background-color: rgb(29, 163, 163);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+}
+
+.hero-img{
+    width: 90%;
+}
+
+/* featured */
+h2{
+  font-size: 4.2rem;
+  line-height: 1.3;
+}
+
+.card-title{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.card-text{
+  font-size: 1.5rem;
+  color: #777;
+}
+
+
+/* how it work */
+.how-it-works-title{
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.how-it-works-text{
+  font-size: 1.8rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.icon{
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 1.2rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  color: #fff;
+  margin-bottom: 1.6rem;
+}
+
+.how-it-works{
+  padding: 2.4rem 0;
+}
+
+
+.testimonials{
+  padding: .5rem 0;
+  background: var(--background-color);
+}
+
+
+.testimonial-text {
+  color: #048E7B;
+}
+
+.testimonials-name{
+  color: #048E7B;
+}
+
+.testimonial-card{
+  width: 50%;
+}
+
+h3{
+  font-size: 2.4rem;
+}
+
+
+
+ span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='yellow' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: white;
+}
+
+/* change hamburger button border color */
+ button.navbar-toggler {
+  border-color: #fff;
+}
+
+/* change navbar background on collapse */
+@media (max-width: 982px) {
+  nav .navbar-nav {
+    background-color: #048e7c74;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+  }
+
+  .hero-section{
+    text-align: center;
+  }
+  h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.navbar-brand:hover{
+  color: #048E7B ;
+}
+
+
+.copyright{
+  font-size: 1.4rem;
+  color: #777;
+}
