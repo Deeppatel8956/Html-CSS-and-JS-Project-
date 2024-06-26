@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-item a{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    margin-right: 15px;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+.nav-item a:hover{
+    color: rgb(20, 219, 20) !important;
+}
+
+.navbar-brand{
+    /* height: 50px; */
+    width: 60px;
+}
+
+.search{
+    height: 45px;
+    outline: none;
+    border: 2px solid rgb(20, 219, 20);
+    border-radius: 20px 0px 0px 20px;
+    border-right: none;
+}
+
+.btn1{
+    height: 45px;
+    outline: none;
+    border: 2px solid rgb(20, 219, 20);
+    border-radius: 0px 20px 20px 0px;
+    background-color: rgb(20, 219, 20);
+    color: white;
+    transition: all 0.4s;
+}
+
+.btn1:hover{
+    background-color: white !important;
+    color: black !important;
+    cursor: pointer !important;
+}
+
+/* main */
+.main{
+    height: 100vh;
+    width: 100%;
+    object-fit:contain;
+    background: red;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs4cfypnRs4mYPTBBvWF9N8lwZlWPZSZvedA&s') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main h1{
+    font-size: 5rem;
+    color: blue;
+}
+.main p:nth-child(1){
+    color:brown;
+    font-size: larger;
+}
+
+.main p:nth-child(2){
+    color: aqua !important;
+}
+
+.line{
+    /* border: 2px solid rgb(20, 219, 20); */
+    height: 6px;
+    width: 25%;
+    background-color: rgb(20, 219, 20);
+    display: inline-block;
+}
+
+.mbtn1{
+    border: none;
+    background-color: rgb(20, 219, 20);
+    height: 50px;
+    width: 25%;
+    font-size: medium;
+    border-radius: 50px;
+    color: white;
+    outline: none;
+    transition: all 0.4s;
+}
+
+.mbtn1:hover{
+    background-color: white;
+    color: black;
+}
+.mbtn2{
+    height: 50px;
+    width: 25%;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.4s;
+}
+.mbtn2:hover{
+    background-color: rgb(20, 219, 20);
+    color: white;
+}
+
+
+/* about */
+.about{
+
+    margin-top: 2rem;
+    background-image: url('https://images.pexels.com/photos/20810843/pexels-photo-20810843/free-photo-of-fruit-cakes-on-plates-on-table.jpeg?auto=compress&cs=tinysrgb&w=600');
+    height: 90vh;
+    /* width: 100%; */
+
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+
+/* welcome */
+.welcome .card{
+    border: none;
+    border-radius: 0;
+}
+.welcome h2 {
+    font-weight: lighter;
+    padding: 30px 0px;
+}
+.welcome svg{
+    font-size: 45px;
+}
+
+
+/* product */
+.product img{
+    height: 300px;
+    width: 400px;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+}
+.product svg {
+    text-align: end !important;
+    justify-content: flex-end;
+    align-self: flex-end;
+color: gold;
+}
