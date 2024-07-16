@@ -1,0 +1,146 @@
+@import '../sass/vendore';
+@import '../sass/var';
+@import '../sass/mixin.scss';
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+.main_header{
+    width: 100vw;
+    line-height: 10rem;
+    background-color: #030f23;
+
+    & .navbar-brand{
+        color: $text_color;
+        animation: music 1s linear infinite;
+        animation-direction: alternate;
+    
+
+    & .fa-solid{
+        font-size: 4rem;
+    }
+    @keyframes music {
+        from {
+            transform: rotate(5deg) ;
+        } to{
+            transform: rotate(-5deg);
+        }
+    }
+    &:hover{
+        filter: drop-shadow(0rem 1.5rem 2.0rem rgba(255,255, 157,0.5));
+    }
+    }
+
+    // navbar ul
+    & .navbar-nav{
+        padding-left: 15rem;
+        & .nav-item .nav-link{
+            font-size: 1.6rem;
+            color: $text_color;
+            text-transform: uppercase;
+            padding-right: 3rem;    
+        }
+
+        & .nav-item li:last-child > .nav-link{
+            padding-right: 0%;
+        }
+    }
+    & .nav-item:hover > .nav-link,
+    & .navbar-brand:hover ,& .navbar-brand:hover > .fa-solid{
+        color: $pri_color;
+    }
+
+    & .mybtn{
+        @include mybtn;
+        &:hover{
+         @include hovereffect
+        }
+    }
+   
+}
+
+
+// second part
+.header_hero{
+    width: 100%;
+    height: 80vh;
+    background-color: $main_color;
+
+    &__text{
+        // width: ;
+        // background-color: black;
+        height: 80vh;
+        @include center_con (flex-start);
+
+        & h2{
+            color: $text_color;
+            margin-bottom: 3rem;
+            font-size: 7rem;
+            line-height: 150%;
+            font-weight: 600;
+            & span{
+                color: $pri_color;
+                text-transform: capitalize;
+            }
+        }
+
+        & p{
+            font-size: 1.8rem;
+            color: $text_color;
+            margin-bottom: 5rem;
+        }
+        & .header_text__btn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            & a{
+                @include mybtn;
+                &:hover{
+                    @include hovereffect
+                }
+            }
+
+            & #btn_2{
+                margin-left: 2rem;
+                background-color: rgba(255,255, 157,0.5);
+                &:hover{
+                    @include hovereffect
+                }
+            }
+        }
+    }
+
+    // image part
+    &__img{
+        // background-color: black !important;
+        height: 80vh;
+        @include center_con (flex-end);
+        animation: ani 10s linear infinite alternate;
+
+        @keyframes ani {
+            from{
+                transform: scale(0.9);
+            } to{
+                transform: scale(1);
+            }
+        }
+        & img{
+            filter: drop-shadow(0rem 1.5rem 2.0rem rgba(0,0, 0,0.8));
+        }
+    }
+}
+
+@media (max-width:768px){
+    .header_hero__img{
+        display: none;
+    }
+}
