@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosquito game</title>
+    <style>
+        .playground{
+            background-color: green;
+            position: relative;
+            height: 500px;
+            width: 500px;
+            float: left;
+        }
+        .mosquito{
+            position: relative;
+            height: 50px;
+            /* top:10px ; */
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="playground">
+        <img
+        class="mosquito"
+        id="mosquitoed"
+        onclick="hitmosqutio()"
+         src="https://media.istockphoto.com/id/157197863/photo/a-close-up-of-a-mosquito-on-a-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=7-sqHqHLKzN_M33VYNllEQkqDi2hwsw4bHQqQ6C_v7w=" alt="">
+    </div>
+    <div class="controls">
+        <h3>
+            <span>Total</span>
+            <span class="totalHit"></span>
+        </h3>
+        <button onclick="Startgame()">start game</button>
+    </div>
+    <script>
+        let hotCount=0
+        let isstartGame=false
+        function Startgame() {
+            isstartGame=true
+            var mosquito=document.getElementById('mosquitoed')
+        let time=setInterval(() => {
+            var i=Math.floor(Math.random*500)+1
+            var j=Math.floor(Math.random*500)+1
+            //    console.warn(i);
+               
+          mosquito.style.left=i + "px";
+          mosquito.style.top=j + "px";
+        }, 2000);
+        setTimeout(() => {
+            clearTimeout(time)
+            isstartGame=false
+        }, 3000);    
+        }
+        
+        function hitmosqutio() {
+            if (isstartGame) {
+                hotCount++
+                document.getElementById('totalHit').innerHTML=hotCount    
+            }
+            
+        }
+    </script>
+</body>
+</html>
